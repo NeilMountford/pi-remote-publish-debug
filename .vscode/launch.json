@@ -1,0 +1,32 @@
+{
+   // Use IntelliSense to find out which attributes exist for C# debugging
+   // Use hover for the description of the existing attributes
+   // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+   "version": "0.2.0",
+   "configurations": [
+        {
+            "name": ".NET Core Remote Launch - Framework Dependent (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "~/dotnet/dotnet",
+            "args": [
+                "./HelloPi.dll"
+            ],
+            "preLaunchTask": "publish",
+            "cwd": "/home/pi/development/HelloPi",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "pipeTransport": {
+                "pipeCwd": "${workspaceRoot}",
+                "pipeProgram": "ssh",
+                "pipeArgs": [
+                    "-T",
+                    "-i",
+                    "<path to your ssh key, e.g C:\\Users\\YourName\\.ssh\\id_rsa>",
+                    "<remote machine, e.g pi@raspberrypi.local"
+                ],
+                "debuggerPath": "~/vsdbg/vsdbg"
+            }
+        }
+    ]
+}
