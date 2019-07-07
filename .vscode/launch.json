@@ -8,10 +8,7 @@
             "name": ".NET Core Remote Launch - Framework Dependent (console)",
             "type": "coreclr",
             "request": "launch",
-            "program": "~/dotnet/dotnet",
-            "args": [
-                "./HelloPi.dll"
-            ],
+            "program": "./HelloPi",
             "preLaunchTask": "publish",
             "cwd": "/home/pi/development/HelloPi",
             "stopAtEntry": false,
@@ -22,8 +19,8 @@
                 "pipeArgs": [
                     "-T",
                     "-i",
-                    "<path to your ssh key, e.g C:\\Users\\YourName\\.ssh\\id_rsa>",
-                    "<remote machine, e.g pi@raspberrypi.local"
+                    "C:\\Users\\YourUsername\\.ssh\\id_rsa",
+                    "pi@raspberrypi.local"
                 ],
                 "debuggerPath": "~/vsdbg/vsdbg"
             }
